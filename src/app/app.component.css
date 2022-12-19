@@ -1,0 +1,13 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    width: 50%;
+    align-self: center;
+    flex-direction: column;
+    padding: 10px;
+}

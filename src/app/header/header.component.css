@@ -1,0 +1,16 @@
+.title{
+    color: #336699;
+    font-size: 2.5rem;
+}
+.header-button{
+    background-color: #E4E4DB;
+    border: none;
+    padding: 12px;
+    border-radius: 2px;
+    margin-right:15px ;
+}
+.header-button:hover{
+    background-color: #304855;
+    color: white;
+    transition: .4s;
+}

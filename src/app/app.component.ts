@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tour-of-heroes';
+  onHeroes(){
+    console.log("on heroes")
+  }
+  onDashboard(){
+    console.log("on dashboard")
+  }
 }
