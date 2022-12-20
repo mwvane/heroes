@@ -1,13 +1,13 @@
-.btn-top{
-    max-width: 80px;
-    margin: 12px 2px;
-    padding: 10px 5px;
-    border: none;
-    color: white;
-    background-color: #3F525C;
+.btn-top {
+  max-width: 80px;
+  margin: 12px 2px;
+  padding: 10px 5px;
+  border: none;
+  color: white;
+  background-color: #3f525c;
 }
-.btn-top:hover{
-    color: black;
-    background-color: #E4E4DB;
-    transition: .4s;
+.btn-top:hover {
+  color: black;
+  background-color: #e4e4db;
+  transition: 0.4s;
 }

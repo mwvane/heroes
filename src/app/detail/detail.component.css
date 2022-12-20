@@ -1,11 +1,11 @@
-.main-container{
-    display: flex;
-    flex-direction: column;
+.main-container {
+  display: flex;
+  flex-direction: column;
 }
-.label{
-    color: #3b87af;
-    font-weight: bold;
+.label {
+  color: #3b87af;
+  font-weight: bold;
 }
-.nameInput{
-    padding: 4px;
+.nameInput {
+  padding: 4px;
 }

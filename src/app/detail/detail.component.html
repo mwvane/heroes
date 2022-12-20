@@ -1,13 +1,16 @@
 <div class="main-container">
-    <h3>{{item.name}} details</h3>
-    <span>id: {{item.id}}</span>
-    <br>
-    <span class="label">Hero name
-        <input type="text" 
-        class="nameInput" 
-        placeholder="{{item.name}}"
-        (input)="onTextChange($event.target.value, item.id)"> 
-    </span>
-    <br>
-    <button (click)="onBackClick()" class="btn-rounded">back</button>
+  <h3>{{ item.name }} details</h3>
+  <span>id: {{ item.id }}</span>
+  <br />
+  <span class="label"
+    >Hero name
+    <input
+      type="text"
+      class="nameInput"
+      placeholder="{{ item.name }}"
+      (input)="onTextChange($event.target.value, item.id)"
+    />
+  </span>
+  <br />
+  <button (click)="onBackClick()" class="btn-rounded">back</button>
 </div>

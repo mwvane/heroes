@@ -23,16 +23,15 @@ p {
   transition: 0.2s;
 }
 .btn-delete {
-    background-color: red;
-    right: 10px;
-    position: absolute;
-    border-radius: 50%;
-    border: none;
-    top: 10px;
-    display: none;
-    color: white;
-  }
+  background-color: red;
+  right: 10px;
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+  top: 10px;
+  display: none;
+  color: white;
+}
 .hero:hover > .btn-delete {
-    display: block;
-  }
-
+  display: block;
+}

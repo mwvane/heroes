@@ -10,10 +10,10 @@ import { Hero } from '../model.hero';
 })
 export class AddHeroComponent {
   constructor(private heroService: HeroesService, private helper: Helpers) {}
-  @ViewChild('name') inputName
+  @ViewChild('name') inputName;
   onSave(name: string) {
-    let hero: Hero = {name, id : this.helper.getId()};
+    let hero: Hero = { name, id: this.helper.getId() };
     this.heroService.addHero(hero);
-    this.inputName.nativeElement.value = ''
+    this.inputName.nativeElement.value = '';
   }
 }

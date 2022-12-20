@@ -1,13 +1,13 @@
-.main-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.container{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-direction: column;
-    padding: 10px;
-    min-width: 260px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  padding: 10px;
+  min-width: 260px;
 }

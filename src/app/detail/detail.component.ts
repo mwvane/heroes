@@ -6,25 +6,25 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+  styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent {
-  item: Hero
+  item: Hero;
   constructor(
     private routeActivated: ActivatedRoute,
     private heroService: HeroesService,
     private route: Router,
-    private loaction: Location,
-   ){
-
+    private loaction: Location
+  ) {}
+  ngOnInit() {
+    this.item = this.heroService.getHeroById(
+      this.routeActivated.snapshot.paramMap.get('id')
+    );
   }
-  ngOnInit(){
-    this.item = this.heroService.getHeroById(this.routeActivated.snapshot.paramMap.get('id'))
+  onBackClick() {
+    this.loaction.back();
   }
-  onBackClick(){
-    this.loaction.back(); 
-  }
-  onTextChange(name,id){
-    this.heroService.rename(id,name)
+  onTextChange(name, id) {
+    this.heroService.rename(id, name);
   }
 }

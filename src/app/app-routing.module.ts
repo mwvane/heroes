@@ -7,14 +7,14 @@ import { DetailComponent } from './detail/detail.component';
 import { HeroeComponent } from './heroe/heroe.component';
 
 const routes: Routes = [
-  {path: "dashboard", component: DashboardComponent},
-  {path: "heroes", component: HeroeComponent},
-  {path: "detail/:id", component: DetailComponent},
-  {path: "add-hero", component: AddHeroComponent},
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'heroes', component: HeroeComponent },
+  { path: 'detail/:id', component: DetailComponent },
+  { path: 'add-hero', component: AddHeroComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

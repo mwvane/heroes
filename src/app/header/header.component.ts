@@ -9,7 +9,7 @@ export class HeaderComponent {
   @Output() clickOnDashboard: EventEmitter<any> = new EventEmitter();
   @Output() clickOnHeroes: EventEmitter<any> = new EventEmitter();
   onDashboardClick() {
-    this.clickOnDashboard.emit()
+    this.clickOnDashboard.emit();
   }
   onHeroesClick() {
     this.clickOnHeroes.emit();

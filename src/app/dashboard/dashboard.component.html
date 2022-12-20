@@ -1,5 +1,11 @@
 <div class="mainContainer">
-    <div class="tops">
-        <button *ngFor="let hero of topHeroes" class="btn-top" (click)="onTopbtnClick(hero.id)">{{hero.name}}</button>
-    </div>
+  <div class="tops">
+    <button
+      *ngFor="let hero of topHeroes"
+      class="btn-top"
+      (click)="onTopbtnClick(hero.id)"
+    >
+      {{ hero.name }}
+    </button>
+  </div>
 </div>
