@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HeroesService } from '../heroes.service';
 import { Hero } from '../model.hero';
 
@@ -8,11 +9,11 @@ import { Hero } from '../model.hero';
   styleUrls: ['./heroe.component.css']
 })
 export class HeroeComponent {
-  constructor(private heroService : HeroesService){
+  constructor(private heroService : HeroesService, private router: Router){
 
   }
-  onItemClick(){
-    
+  onItemClick(id){
+    this.router.navigateByUrl(`/detail/${id}`)
   }
   heroes: Hero[] = this.heroService.getHeroes()
 }

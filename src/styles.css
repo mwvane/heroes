@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-rounded{
+    padding: 10px;
+    border-radius: 18px;
+    border: none;
+    max-width: 60px;
+    font-weight: bold;
+}
+.btn-rounded:hover{
+    background-color: #304855;
+    color: white;
+    transition: .4s;
+}

@@ -14,7 +14,7 @@ export class AppComponent {
     this.router.navigateByUrl("/heroes")
   }
   onDashboard(){
-    console.log("on dashboard")
-    this.router.navigate['/dashboard']
+    this.router.navigateByUrl('/dashboard')
   }
+  
 }

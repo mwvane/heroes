@@ -1,4 +1,4 @@
 <div class="container">
-  <app-hero-item *ngFor="let hero  of heroes" [hero]="hero" (itemClick)="onItemClick()" class="hero">
+  <app-hero-item *ngFor="let hero  of heroes" [hero]="hero" (itemClick)="onItemClick(hero.id)" class="hero">
   </app-hero-item>
 </div>
