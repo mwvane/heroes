@@ -8,6 +8,8 @@ import { HeroeComponent } from './heroe/heroe.component';
 import { HeroItemComponent } from './hero-item/hero-item.component';
 import { DetailComponent } from './detail/detail.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AddHeroComponent } from './add-hero/add-hero.component';
+import { Helpers } from './helper';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeroeComponent,
     HeroItemComponent,
     DetailComponent,
+    AddHeroComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,12 @@ import { Hero } from './model.hero';
 
 @Injectable({ providedIn: 'root' })
 export class HeroesService {
+  constructor(){
+    let tmp = JSON.parse(localStorage.getItem('heroes'))
+    if(tmp.length){
+      this.heroes = tmp 
+    }
+  }
   private heroes: Hero[] = [
     { id: 12, name: 'Dr. Nice' },
     { id: 13, name: 'Bombasto' },
@@ -34,6 +40,11 @@ export class HeroesService {
   }
   rename(id, name){
     this.findById(id).name = name
+    this.save()
+  }
+  addHero(hero:Hero){
+    this.heroes.unshift(hero)
+    this.save()
   }
   deleteHero(heroId){
     // this.heroes = this.heroes.filter(id => id != heroId)
@@ -48,5 +59,9 @@ export class HeroesService {
     if(index != null){
       this.heroes.splice(index,1)
     }
+    this.save()
+  }
+  private save(){
+    localStorage.setItem('heroes',JSON.stringify(this.heroes))
   }
 }

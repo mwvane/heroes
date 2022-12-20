@@ -1,4 +1,7 @@
 <div class="container">
+  <div>
+    <button class="btn-rounded" (click)="onAddClick()">Add hero</button>
+  </div>
   <div *ngIf="heroes.length == 0">
     <p>There is't any hero</p>
   </div>

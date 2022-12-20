@@ -16,6 +16,9 @@ export class HeroeComponent {
     this.router.navigateByUrl(`/detail/${id}`)
   }
   heroes: Hero[] = this.heroService.getHeroes()
+  onAddClick(){
+    this.router.navigateByUrl("/add-hero")
+  }
   onDelete(id){
     this.heroService.deleteHero(id)
   }
