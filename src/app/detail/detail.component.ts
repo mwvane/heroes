@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { HeroesService } from '../heroes.service';
 import { Hero } from '../model.hero';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -14,6 +14,7 @@ export class DetailComponent {
     private routeActivated: ActivatedRoute,
     private heroService: HeroesService,
     private route: Router,
+    private loaction: Location,
    ){
 
   }
@@ -22,6 +23,6 @@ export class DetailComponent {
     debugger
   }
   onBackClick(){
-    this.route.navigateByUrl("/heroes")
+    this.loaction.back(); 
   }
 }
