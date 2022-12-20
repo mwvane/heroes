@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Hero } from './model.hero';
 
 @Injectable({ providedIn: 'root' })
@@ -8,6 +8,8 @@ export class HeroesService {
     if (tmp.length) {
       this.heroes = tmp;
     }
+    this.getTopHeroes()
+    let x = this.topHroes
   }
   private heroes: Hero[] = [
     { id: 12, name: 'Dr. Nice' },
@@ -20,17 +22,21 @@ export class HeroesService {
     { id: 19, name: 'Magma' },
     { id: 20, name: 'Tornado' },
   ];
-  private topHroes: Hero[] = [
-    this.heroes[1],
-    this.heroes[4],
-    this.heroes[2],
-    this.heroes[3],
-  ];
+  private topHroes: Hero[] 
+
   private findById(id) {
     return this.heroes.find((hero) => hero.id == id);
   }
   getHeroes() {
     return this.heroes;
+  }
+  getTopHeroes(){
+    this.topHroes = [
+      this.heroes[1],
+      this.heroes[4],
+      this.heroes[2],
+      this.heroes[3],
+    ];
   }
   getHeroById(id) {
     return this.findById(id);
@@ -40,11 +46,11 @@ export class HeroesService {
   }
   rename(id, name) {
     this.findById(id).name = name;
-    this.save();
+    this.saveHeroes();
   }
   addHero(hero: Hero) {
     this.heroes.unshift(hero);
-    this.save();
+    this.saveHeroes();
   }
   deleteHero(heroId) {
     // this.heroes = this.heroes.filter(id => id != heroId)
@@ -59,9 +65,9 @@ export class HeroesService {
     if (index != null) {
       this.heroes.splice(index, 1);
     }
-    this.save();
+    this.saveHeroes();
   }
-  private save() {
+  private saveHeroes() {
     localStorage.setItem('heroes', JSON.stringify(this.heroes));
   }
 }

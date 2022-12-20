@@ -7,6 +7,7 @@ import { DetailComponent } from './detail/detail.component';
 import { HeroeComponent } from './heroe/heroe.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'heroes', component: HeroeComponent },
   { path: 'detail/:id', component: DetailComponent },
