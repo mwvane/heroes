@@ -1,4 +1,13 @@
 <div class="container">
-  <app-hero-item *ngFor="let hero  of heroes" [hero]="hero" (itemClick)="onItemClick(hero.id)" class="hero">
+  <div *ngIf="heroes.length == 0">
+    <p>There is't any hero</p>
+  </div>
+  <app-hero-item
+    *ngFor="let hero of heroes"
+    [hero]="hero"
+    (itemClick)="onItemClick(hero.id)"
+    (delete)="onDelete(hero.id)"
+    class="hero"
+  >
   </app-hero-item>
 </div>

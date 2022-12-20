@@ -20,9 +20,11 @@ export class DetailComponent {
   }
   ngOnInit(){
     this.item = this.heroService.getHeroById(this.routeActivated.snapshot.paramMap.get('id'))
-    debugger
   }
   onBackClick(){
     this.loaction.back(); 
+  }
+  onTextChange(name,id){
+    this.heroService.rename(id,name)
   }
 }

@@ -2,5 +2,6 @@
   <div class="hero" (click) = "onItemClick()">
     <span>{{hero.id}}</span>
     <p>{{hero.name}}</p>
+    <button class="btn-delete" (click)="onDelete(); $event.stopPropagation()">X</button>
   </div>
 </div>

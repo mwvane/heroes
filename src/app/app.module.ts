@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroeComponent } from './heroe/heroe.component';
 import { HeroItemComponent } from './hero-item/hero-item.component';
 import { DetailComponent } from './detail/detail.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DetailComponent } from './detail/detail.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
