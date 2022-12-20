@@ -11,5 +11,8 @@ export class HeroeComponent {
   constructor(private heroService : HeroesService){
 
   }
+  onItemClick(){
+    
+  }
   heroes: Hero[] = this.heroService.getHeroes()
 }

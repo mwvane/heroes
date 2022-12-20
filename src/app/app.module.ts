@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroeComponent } from './heroe/heroe.component';
+import { HeroItemComponent } from './hero-item/hero-item.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { HeroeComponent } from './heroe/heroe.component';
     HeaderComponent,
     DashboardComponent,
     HeroeComponent,
+    HeroItemComponent,
   ],
   imports: [
     BrowserModule,

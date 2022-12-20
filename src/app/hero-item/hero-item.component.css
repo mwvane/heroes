@@ -1,0 +1,23 @@
+.hero {
+    display: flex;
+    margin: 3px;
+    margin-left: 0;
+    height: 40px;
+    text-align: center;
+    background-color: #eeeeee;
+    border-radius: 0 6px 6px 0;
+  }
+  span {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border-radius: 6px 0 0 6px;
+  }
+  p {
+    margin-left: 8px;
+    margin-top: 10px;
+  }
+  .hero:hover {
+    margin-left: 6px;
+    transition: .2s;
+  }

@@ -6,8 +6,8 @@
 .container{
     display: flex;
     justify-content: center;
-    background-color: red;
     align-self: center;
     flex-direction: column;
     padding: 10px;
+    min-width: 260px;
 }
