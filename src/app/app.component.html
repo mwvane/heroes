@@ -1,5 +1,4 @@
 <div class="main-container">
-  <div class="container">
-   <app-header (clickOnHeroes)="onHeroes()" (clickOnDashboard)="onDashboard()"></app-header>
-  </div>
+  <app-header (clickOnHeroes)="onHeroes()"></app-header>
+  <router-outlet></router-outlet>
 </div>
