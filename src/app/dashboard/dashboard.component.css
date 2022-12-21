@@ -11,3 +11,6 @@
   background-color: #e4e4db;
   transition: 0.4s;
 }
+.top{
+  display: flex;
+}

@@ -4,12 +4,12 @@ import { Hero } from './model.hero';
 @Injectable({ providedIn: 'root' })
 export class HeroesService {
   constructor() {
-    let tmp = JSON.parse(localStorage.getItem('heroes'));
-    if (tmp.length) {
-      this.heroes = tmp;
+    let tmp = localStorage.getItem('heroes');
+    if (tmp !== null) {
+      this.heroes = JSON.parse(tmp);
     }
-    this.getTopHeroes()
-    let x = this.topHroes
+    this.getTopHeroes();
+    let x = this.topHroes;
   }
   private heroes: Hero[] = [
     { id: 12, name: 'Dr. Nice' },
@@ -22,15 +22,11 @@ export class HeroesService {
     { id: 19, name: 'Magma' },
     { id: 20, name: 'Tornado' },
   ];
-  private topHroes: Hero[] 
-
-  private findById(id) {
-    return this.heroes.find((hero) => hero.id == id);
-  }
+  private topHroes: Hero[];
   getHeroes() {
     return this.heroes;
   }
-  getTopHeroes(){
+  getTopHeroes() {
     this.topHroes = [
       this.heroes[1],
       this.heroes[4],
@@ -39,13 +35,14 @@ export class HeroesService {
     ];
   }
   getHeroById(id) {
-    return this.findById(id);
+    return this.heroes.find((hero) => hero.id == id);
   }
   getTopHeros() {
     return this.topHroes;
   }
   rename(id, name) {
-    this.findById(id).name = name;
+    const hero = this.getHeroById(id)
+    hero.name = name
     this.saveHeroes();
   }
   addHero(hero: Hero) {
@@ -53,16 +50,9 @@ export class HeroesService {
     this.saveHeroes();
   }
   deleteHero(heroId) {
-    // this.heroes = this.heroes.filter(id => id != heroId)
-    //not worcking
-    let index = null;
-    for (let i = 0; i < this.heroes.length; i++) {
-      if (this.heroes[i].id == heroId) {
-        index = i;
-        break;
-      }
-    }
-    if (index != null) {
+    // this.heroes = this.heroes.filter((hero) => hero.id != heroId)
+    const index = this.heroes.findIndex((hero) => hero.id == heroId);
+    if (index >= 0) {
       this.heroes.splice(index, 1);
     }
     this.saveHeroes();

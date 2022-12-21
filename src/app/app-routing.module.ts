@@ -4,7 +4,7 @@ import { AddHeroComponent } from './add-hero/add-hero.component';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DetailComponent } from './detail/detail.component';
-import { HeroeComponent } from './heroe/heroe.component';
+import { HeroeComponent } from './hero/hero.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },

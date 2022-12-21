@@ -3,15 +3,11 @@ import { HeroesService } from './heroes.service';
 @Injectable({ providedIn: 'root' })
 export class Helpers {
   constructor(private heroService: HeroesService) {}
-  
+
   getId() {
     let heroes = this.heroService.getHeroes();
-    let maxId = heroes[0].id;
-    for (let i = 1; i < heroes.length; i++) {
-      if (maxId < heroes[i].id) {
-        maxId = heroes[i].id;
-      }
-    }
-    return maxId + 1;
+    return heroes.reduce((final, current)=>{
+      return Math.max(final, current.id)
+    },0) + 1
   }
 }
