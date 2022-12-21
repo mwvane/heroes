@@ -5,8 +5,8 @@ import { Hero } from '../model.hero';
 
 @Component({
   selector: 'app-heroe',
-  templateUrl: './heroe.component.html',
-  styleUrls: ['./heroe.component.css']
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.css']
 })
 export class HeroeComponent {
   constructor(private heroService : HeroesService, private router: Router){
