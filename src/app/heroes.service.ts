@@ -4,12 +4,11 @@ import { Hero } from './model.hero';
 @Injectable({ providedIn: 'root' })
 export class HeroesService {
   constructor() {
-    let tmp = localStorage.getItem('heroes');
-    if (tmp !== null) {
-      this.heroes = JSON.parse(tmp);
+    let tmp = JSON.parse(localStorage.getItem('heroes'))
+    if (tmp.length > 0) {
+      this.heroes = (tmp);
     }
     this.getTopHeroes();
-    let x = this.topHroes;
   }
   private heroes: Hero[] = [
     { id: 12, name: 'Dr. Nice' },
@@ -50,7 +49,8 @@ export class HeroesService {
     this.saveHeroes();
   }
   deleteHero(heroId) {
-    // this.heroes = this.heroes.filter((hero) => hero.id != heroId)
+    this.heroes = this.heroes.filter((hero) => hero.id != heroId)
+    debugger
     const index = this.heroes.findIndex((hero) => hero.id == heroId);
     if (index >= 0) {
       this.heroes.splice(index, 1);
